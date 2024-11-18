@@ -1,12 +1,14 @@
 import { useContext } from "react";
 import { FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 
 
 const Login = () => {
 
-    const {signInUser} = useContext(AuthContext);
+    const navigate = useNavigate();
+
+    const { signInUser, signInWithGoogle } = useContext(AuthContext);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -17,12 +19,25 @@ const Login = () => {
         const password = form.get('password');
 
         signInUser(email, password)
-        .then(result => {
-            console.log(result);
-        })
-        .catch(error => {
-            console.log('ERROR', error.message);
-        })
+            .then(result => {
+                console.log(result);
+                e.target.reset();
+                navigate("/");
+            })
+            .catch(error => {
+                console.log('ERROR', error.message);
+            })
+    }
+
+    const handleGoogleLogin = () => {
+        signInWithGoogle()
+            .then((result) => {
+                console.log(result.user);
+                navigate("/");
+            })
+            .catch((error) => {
+                console.log('ERROR', error);
+            })
     }
 
 
@@ -49,7 +64,7 @@ const Login = () => {
                 <button className="btn btn-primary">Login</button>
             </div>
             <div className="form-control">
-                <button className="btn bg-slate-200"><FaGoogle className="mr-2"></FaGoogle> Login with Google</button>
+                <button onClick={handleGoogleLogin} className="btn bg-slate-200"><FaGoogle className="mr-2"></FaGoogle> Login with Google</button>
             </div>
             <h3>Don't have an account? <Link className="underline" to="/register">Register</Link></h3>
         </form>
