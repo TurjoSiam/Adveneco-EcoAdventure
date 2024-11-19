@@ -1,0 +1,213 @@
+[
+    {
+        "id": 1,
+        "adventureTitle": "Himalayan Serenity Trek",
+        "image": "https://i.ibb.co.com/dPrNFRZ/himalay.jpg",
+        "categoryName": "Mountain Treks",
+        "shortDescription": "Explore the pristine trails of the Himalayas, surrounded by breathtaking peaks.",
+        "adventureCost": 500,
+        "bookingAvailability": true,
+        "location": "Nepal",
+        "duration": "7 Days",
+        "adventureLevel": "Moderate",
+        "includedItems": [
+            "Guide",
+            "Meals",
+            "Camping Gear"
+        ],
+        "ecoFriendlyFeatures": [
+            "Reusable utensils",
+            "Eco-friendly lodging"
+        ],
+        "maxGroupSize": 10,
+        "specialInstructions": [
+            "Carry warm clothing",
+            "Stay hydrated",
+            "Respect local customs"
+        ]
+    },
+    {
+        "id": 2,
+        "adventureTitle": "Great Barrier Reef Dive",
+        "image": "https://i.ibb.co.com/z6XgwVc/reef.jpg",
+        "categoryName": "Ocean Dives",
+        "shortDescription": "Dive into the world’s largest coral reef system, teeming with marine life.",
+        "adventureCost": 700,
+        "bookingAvailability": true,
+        "location": "Australia",
+        "duration": "5 Hours",
+        "adventureLevel": "Advanced",
+        "includedItems": [
+            "Scuba Gear",
+            "Snacks",
+            "Professional Instructor"
+        ],
+        "ecoFriendlyFeatures": [
+            "Marine-safe sunscreen",
+            "Plastic-free gear"
+        ],
+        "maxGroupSize": 8,
+        "specialInstructions": [
+            "Have prior dive certification",
+            "Follow marine conservation guidelines"
+        ]
+    },
+    {
+        "id": 3,
+        "adventureTitle": "Serengeti Safari",
+        "image": "https://i.ibb.co.com/sQrFC2X/safari.jpg",
+        "categoryName": "Wildlife Safaris",
+        "shortDescription": "Experience the majestic wildlife of the Serengeti up close.",
+        "adventureCost": 1200,
+        "bookingAvailability": true,
+        "location": "Tanzania",
+        "duration": "3 Days",
+        "adventureLevel": "Easy",
+        "includedItems": [
+            "Safari Vehicle",
+            "Binoculars",
+            "Meals"
+        ],
+        "ecoFriendlyFeatures": [
+            "Solar-powered camps",
+            "Zero waste policy"
+        ],
+        "maxGroupSize": 12,
+        "specialInstructions": [
+            "Wear neutral colors",
+            "Avoid strong scents"
+        ]
+    },
+    {
+        "id": 4,
+        "adventureTitle": "Amazon Rainforest Expedition",
+        "image": "https://i.ibb.co.com/x8bwYDW/amazon.jpg",
+        "categoryName": "Forest Expeditions",
+        "shortDescription": "Immerse yourself in the biodiversity of the Amazon rainforest.",
+        "adventureCost": 800,
+        "bookingAvailability": true,
+        "location": "Brazil",
+        "duration": "5 Days",
+        "adventureLevel": "Challenging",
+        "includedItems": [
+            "Local Guide",
+            "Meals",
+            "Safety Equipment"
+        ],
+        "ecoFriendlyFeatures": [
+            "Biodegradable supplies",
+            "No-trace camping"
+        ],
+        "maxGroupSize": 8,
+        "specialInstructions": [
+            "Use insect repellent",
+            "Wear long sleeves",
+            "Stay on marked paths"
+        ]
+    },
+    {
+        "id": 5,
+        "adventureTitle": "Starry Desert Nights",
+        "image": "https://i.ibb.co.com/vXT4gyz/desert.jpg",
+        "categoryName": "Desert Exploration",
+        "shortDescription": "Camp under the stars in the vast desert, with unforgettable views.",
+        "adventureCost": 400,
+        "bookingAvailability": true,
+        "location": "Sahara Desert",
+        "duration": "2 Days",
+        "adventureLevel": "Moderate",
+        "includedItems": [
+            "Tents",
+            "Meals",
+            "Camel Ride"
+        ],
+        "ecoFriendlyFeatures": [
+            "Solar-powered lights",
+            "Reusable water containers"
+        ],
+        "maxGroupSize": 15,
+        "specialInstructions": [
+            "Pack light",
+            "Bring sunscreen",
+            "Stay hydrated"
+        ]
+    },
+    {
+        "id": 6,
+        "adventureTitle": "Pacific Mangrove Kayaking",
+        "image": "https://i.ibb.co.com/nDZw149/mangrove.jpg",
+        "categoryName": "Mangrove Forest Expeditions",
+        "shortDescription": "Paddle through lush mangrove forests and discover unique ecosystems.",
+        "adventureCost": 200,
+        "bookingAvailability": true,
+        "location": "Philippines",
+        "duration": "3 Hours",
+        "adventureLevel": "Easy",
+        "includedItems": [
+            "Kayak",
+            "Life Jacket",
+            "Guide"
+        ],
+        "ecoFriendlyFeatures": [
+            "Non-polluting activities",
+            "Mangrove conservation donations"
+        ],
+        "maxGroupSize": 6,
+        "specialInstructions": [
+            "Avoid disturbing wildlife",
+            "Wear waterproof shoes"
+        ]
+    },
+    {
+        "id": 7,
+        "adventureTitle": "River Rapids Challenge",
+        "image": "https://i.ibb.co.com/JB1dbJF/river.jpg",
+        "categoryName": "River Adventures",
+        "shortDescription": "Navigate thrilling rapids with an expert guide.",
+        "adventureCost": 350,
+        "bookingAvailability": true,
+        "location": "Colorado, USA",
+        "duration": "Half Day",
+        "adventureLevel": "Advanced",
+        "includedItems": [
+            "Raft",
+            "Safety Gear",
+            "Snacks"
+        ],
+        "ecoFriendlyFeatures": [
+            "No single-use plastics",
+            "River clean-up initiatives"
+        ],
+        "maxGroupSize": 8,
+        "specialInstructions": [
+            "Must know swimming",
+            "Wear quick-dry clothing"
+        ]
+    },
+    {
+        "id": 8,
+        "adventureTitle": "Glamping in the Rockies",
+        "image": "https://i.ibb.co.com/Qr24t3w/retreats.jpg",
+        "categoryName": "Camping Retreats",
+        "shortDescription": "Enjoy luxury camping in the heart of the Rocky Mountains.",
+        "adventureCost": 600,
+        "bookingAvailability": true,
+        "location": "Colorado, USA",
+        "duration": "3 Days",
+        "adventureLevel": "Easy",
+        "includedItems": [
+            "Luxury Tent",
+            "Meals",
+            "Firewood"
+        ],
+        "ecoFriendlyFeatures": [
+            "Compostable utensils",
+            "Solar-powered facilities"
+        ],
+        "maxGroupSize": 12,
+        "specialInstructions": [
+            "Bring warm clothing",
+            "Respect quiet hours"
+        ]
+    }
+]

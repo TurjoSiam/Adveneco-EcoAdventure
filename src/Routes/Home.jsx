@@ -1,9 +1,10 @@
-
+import Adventures from "../HomeComponents/Adventures";
 
 const Home = () => {
+
     return (
-        <div>
-            <h2>this is from home file</h2>
+        <div className="w-10/12 mx-auto font-spinnaker">
+           <Adventures></Adventures>
         </div>
     );
 };

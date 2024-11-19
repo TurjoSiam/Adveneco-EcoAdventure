@@ -13,6 +13,7 @@ import Login from './Routes/Login';
 import AuthProvider from './Provider/AuthProvider';
 import Register from './Routes/Register';
 import PrivateRoute from './Routes/PrivateRoute';
+import ErrorPage from './LayoutComponents/ErrorPage';
 
 
 
@@ -20,10 +21,12 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout></Layout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: () => fetch('/data.json')
       },
       {
         path: "/profile",
