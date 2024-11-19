@@ -1,9 +1,11 @@
 import Adventures from "../HomeComponents/Adventures";
+import Banner from "../HomeComponents/Banner";
 
 const Home = () => {
 
     return (
-        <div className="w-10/12 mx-auto font-spinnaker">
+        <div className="mx-auto font-spinnaker">
+            <Banner></Banner>
            <Adventures></Adventures>
         </div>
     );

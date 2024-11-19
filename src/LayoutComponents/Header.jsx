@@ -35,7 +35,7 @@ const Header = () => {
 
 
     return (
-        <div className="navbar bg-base-100 w-11/12 mx-auto font-spinnaker border">
+        <div className="navbar bg-base-100 px-20 mx-auto font-spinnaker sticky top-0 z-50 bg-[#ffffffaa] backdrop-blur-2xl">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -70,7 +70,7 @@ const Header = () => {
             </div>
             <div className="navbar-end">
                 {
-                    user && user?.email?
+                    user && user?.email ?
                         <>
                             <img className="w-10 h-10 object-cover rounded-full mr-2" src={user?.photoURL} alt="user photo" />
                             <a onClick={handleSignOut} className="btn ease-in duration-300 bg-gradient-to-tr from-orange-500 to-orange-300 hover:bg-gradient-to-tr hover:from-orange-300 hover:to-orange-500">Sign Out</a>

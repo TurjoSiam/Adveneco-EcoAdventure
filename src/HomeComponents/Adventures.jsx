@@ -7,7 +7,7 @@ const Adventures = () => {
     const allData = useLoaderData();
 
     return (
-        <div className="w-11/12 mx-auto space-y-5">
+        <div className="w-10/12 mx-auto space-y-5 my-10">
             <h2 className="text-3xl font-extrabold">Eco-adventure Experiences</h2>
             <div className="grid grid-cols-3 gap-7 animate__animated animate__fadeIn animate__slow">
                 {
