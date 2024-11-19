@@ -7,7 +7,7 @@ const Register = () => {
 
     const navigate = useNavigate();
 
-    const { createNewUser } = useContext(AuthContext);
+    const { createNewUser, profileUpdateWhenLogin } = useContext(AuthContext);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -23,11 +23,21 @@ const Register = () => {
         .then(result => {
             console.log(result);
             e.target.reset();
-            navigate("/");
+            profileUpdateWhenLogin({
+                displayName: name, photoURL: photo
+            })
+            .then(() => {
+                navigate("/");
+            })
+            .catch((error) => {
+                console.log('ERROR', error.message);
+            })
         })
         .catch(error => {
             console.log('ERROR', error.message);
         })
+
+        
     }
 
 

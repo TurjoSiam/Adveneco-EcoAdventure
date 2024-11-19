@@ -70,13 +70,13 @@ const Header = () => {
             </div>
             <div className="navbar-end">
                 {
-                    user ?
+                    user && user?.email?
                         <>
-                            <span className="w-10 rounded-full bg-green-400 mr-2">{user.email}</span>
-                            <a onClick={handleSignOut} className="btn">Sign Out</a>
+                            <img className="w-10 h-10 object-cover rounded-full mr-2" src={user?.photoURL} alt="user photo" />
+                            <a onClick={handleSignOut} className="btn transition ease-in duration-300 bg-gradient-to-tr from-orange-500 to-orange-300 hover:bg-gradient-to-tr hover:from-orange-300 hover:to-orange-500">Sign Out</a>
                         </>
                         :
-                        <Link className="btn" to="/login">Login</Link>
+                        <Link className="btn transition ease-in duration-300 bg-gradient-to-tr from-orange-500 to-orange-300 hover:bg-gradient-to-tr hover:from-orange-300 hover:to-orange-500" to="/login">Login</Link>
                 }
             </div>
         </div>
