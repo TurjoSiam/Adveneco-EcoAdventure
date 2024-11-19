@@ -1,19 +1,26 @@
 import { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import logo from "../../src/assets/logo.png"
 
 const Header = () => {
+
+    const navigate = useNavigate();
+
+    const handleLogo = () => {
+        navigate("/");
+    }
 
     const { user, signOutUser } = useContext(AuthContext);
 
     const handleSignOut = () => {
         signOutUser()
-        .then(() => {
-            console.log('sign out successfully');
-        })
-        .catch((error) => {
-            console.log('ERROR', error);
-        })
+            .then(() => {
+                console.log('sign out successfully');
+            })
+            .catch((error) => {
+                console.log('ERROR', error);
+            })
     }
 
     const links = <>
@@ -28,7 +35,7 @@ const Header = () => {
 
 
     return (
-        <div className="navbar bg-base-100 w-11/12 mx-auto">
+        <div className="navbar bg-base-100 w-11/12 mx-auto font-spinnaker">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -51,7 +58,10 @@ const Header = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <div className="flex items-center cursor-pointer" onClick={handleLogo}>
+                    <img className="w-14" src={logo} alt="logo" />
+                    <span className="text-3xl font-carter">Adveneco</span>
+                </div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -61,12 +71,12 @@ const Header = () => {
             <div className="navbar-end">
                 {
                     user ?
-                    <>
-                        <span className="w-10 rounded-full bg-green-400 mr-2">{user.email}</span>
-                        <a onClick={handleSignOut} className="btn">Sign Out</a>
-                    </>
-                    :
-                    <Link className="btn" to="/login">Login</Link>
+                        <>
+                            <span className="w-10 rounded-full bg-green-400 mr-2">{user.email}</span>
+                            <a onClick={handleSignOut} className="btn">Sign Out</a>
+                        </>
+                        :
+                        <Link className="btn" to="/login">Login</Link>
                 }
             </div>
         </div>

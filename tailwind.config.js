@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "spinnaker" : ["spinnaker", "serif"],
+        "carter" : ["carter one", "serif"]
+      }
+    },
   },
   plugins: [require('daisyui'),],
 }
