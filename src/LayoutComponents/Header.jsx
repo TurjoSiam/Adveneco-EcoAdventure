@@ -73,10 +73,10 @@ const Header = () => {
                     user && user?.email?
                         <>
                             <img className="w-10 h-10 object-cover rounded-full mr-2" src={user?.photoURL} alt="user photo" />
-                            <a onClick={handleSignOut} className="btn transition ease-in duration-300 bg-gradient-to-tr from-orange-500 to-orange-300 hover:bg-gradient-to-tr hover:from-orange-300 hover:to-orange-500">Sign Out</a>
+                            <a onClick={handleSignOut} className="btn ease-in duration-300 bg-gradient-to-tr from-orange-500 to-orange-300 hover:bg-gradient-to-tr hover:from-orange-300 hover:to-orange-500">Sign Out</a>
                         </>
                         :
-                        <Link className="btn transition ease-in duration-300 bg-gradient-to-tr from-orange-500 to-orange-300 hover:bg-gradient-to-tr hover:from-orange-300 hover:to-orange-500" to="/login">Login</Link>
+                        <Link className="btn ease-in duration-300 bg-gradient-to-tr from-orange-500 to-orange-300 hover:bg-gradient-to-tr hover:from-orange-300 hover:to-orange-500" to="/login">Login</Link>
                 }
             </div>
         </div>

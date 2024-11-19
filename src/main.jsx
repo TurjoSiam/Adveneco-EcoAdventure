@@ -14,6 +14,7 @@ import AuthProvider from './Provider/AuthProvider';
 import Register from './Routes/Register';
 import PrivateRoute from './Routes/PrivateRoute';
 import ErrorPage from './LayoutComponents/ErrorPage';
+import AdventureDetails from './Routes/AdventureDetails';
 
 
 
@@ -35,6 +36,11 @@ const router = createBrowserRouter([
       {
         path: "/updateprofile",
         element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
+      },
+      {
+        path: "/adventuredetails/:adventureId",
+        element: <PrivateRoute><AdventureDetails></AdventureDetails></PrivateRoute>,
+        loader: () => fetch('/data.json')
       },
       {
         path: "/login",

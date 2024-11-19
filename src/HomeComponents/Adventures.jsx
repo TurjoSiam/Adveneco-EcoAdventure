@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import AdventureDetails from "./AdventureDetails";
+import Adventure from "./Adventure";
 import 'animate.css';
 
 const Adventures = () => {
@@ -11,7 +11,7 @@ const Adventures = () => {
             <h2 className="text-3xl font-extrabold">Eco-adventure Experiences</h2>
             <div className="grid grid-cols-3 gap-7 animate__animated animate__fadeIn animate__slow">
                 {
-                    allData.map(data => <AdventureDetails key={data.id} data={data}></AdventureDetails>)
+                    allData.map(data => <Adventure key={data.id} data={data}></Adventure>)
                 }
             </div>
         </div>
