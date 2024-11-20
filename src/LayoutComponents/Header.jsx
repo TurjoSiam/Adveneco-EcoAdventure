@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import logo from "../../src/assets/logo.png"
+import Tippy from "@tippyjs/react";
 
 const Header = () => {
 
@@ -72,7 +73,9 @@ const Header = () => {
                 {
                     user && user?.email ?
                         <>
-                            <img className="w-10 h-10 object-cover rounded-full mr-2" src={user?.photoURL} alt="user photo" />
+                            <Tippy content={<span className="py-1 px-2 rounded-lg text-white bg-[#000000a2]">{user.displayName}</span>}>
+                                <img className="w-10 h-10 object-cover rounded-full mr-2" src={user?.photoURL} alt="user photo" />
+                            </Tippy>
                             <a onClick={handleSignOut} className="btn ease-in duration-300 bg-gradient-to-tr from-orange-500 to-orange-300 hover:bg-gradient-to-tr hover:from-orange-300 hover:to-orange-500">Sign Out</a>
                         </>
                         :

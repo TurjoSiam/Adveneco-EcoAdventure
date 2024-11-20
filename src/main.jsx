@@ -15,6 +15,7 @@ import Register from './Routes/Register';
 import PrivateRoute from './Routes/PrivateRoute';
 import ErrorPage from './LayoutComponents/ErrorPage';
 import AdventureDetails from './Routes/AdventureDetails';
+import { ToastContainer } from 'react-toastify';
 
 
 
@@ -60,6 +61,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
       <RouterProvider router={router} />
+      <ToastContainer></ToastContainer>
     </AuthProvider>
   </StrictMode>,
 )

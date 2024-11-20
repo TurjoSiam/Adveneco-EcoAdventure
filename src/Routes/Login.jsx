@@ -2,6 +2,9 @@ import { useContext } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 
 const Login = () => {
@@ -23,9 +26,17 @@ const Login = () => {
                 console.log(result);
                 e.target.reset();
                 navigate("/");
+                toast.success('Login successful', {
+                    position: "bottom-right",
+                    className: 'foo-bar'
+                })
             })
             .catch(error => {
                 console.log('ERROR', error.message);
+                toast.error('Something went wrong, please try again', {
+                    position: "bottom-right",
+                    className: 'foo-bar'
+                })
             })
     }
 
@@ -34,9 +45,14 @@ const Login = () => {
             .then((result) => {
                 console.log(result.user);
                 navigate("/");
+                toast.success('Login successful', {
+                    position: "bottom-right",
+                    className: 'foo-bar'
+                })
             })
             .catch((error) => {
                 console.log('ERROR', error);
+                toast.error('Something went wrong, try again')
             })
     }
 

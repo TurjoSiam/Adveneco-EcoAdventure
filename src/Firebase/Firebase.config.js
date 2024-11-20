@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCfDpp0YfGnEFo0FATUgG-w8NLOGaOsFCQ",
-  authDomain: "eco-adventure-fc271.firebaseapp.com",
-  projectId: "eco-adventure-fc271",
-  storageBucket: "eco-adventure-fc271.firebasestorage.app",
-  messagingSenderId: "757905546840",
-  appId: "1:757905546840:web:efceffa16291348e76342d"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId:import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase
