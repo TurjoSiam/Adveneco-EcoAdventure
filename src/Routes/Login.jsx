@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
@@ -12,6 +12,8 @@ const Login = () => {
     const navigate = useNavigate();
 
     const { signInUser, signInWithGoogle } = useContext(AuthContext);
+
+    const emailRef = useRef(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -56,6 +58,10 @@ const Login = () => {
             })
     }
 
+    const handleForgetPassword = () => {
+        navigate("/forgetpassword", {state: {revalue: emailRef.current?.value}});
+    }
+
 
 
     return (
@@ -65,14 +71,14 @@ const Login = () => {
                 <label className="label">
                     <span className="label-text">Email</span>
                 </label>
-                <input type="email" placeholder="email" name="email" className="input input-bordered" required />
+                <input type="email" ref={emailRef} placeholder="email" name="email" className="input input-bordered" required />
             </div>
             <div className="form-control">
                 <label className="label">
                     <span className="label-text">Password</span>
                 </label>
                 <input type="password" placeholder="password" name="password" className="input input-bordered" required />
-                <label className="label">
+                <label className="label" onClick={handleForgetPassword}>
                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                 </label>
             </div>

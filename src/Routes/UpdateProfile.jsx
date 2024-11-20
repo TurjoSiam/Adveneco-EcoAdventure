@@ -35,6 +35,10 @@ const UpdateProfile = () => {
             })
             .catch((error) => {
                 console.log('ERROR', error.message);
+                toast.error('Something went wrong, please try again', { 
+                    position: "bottom-right",
+                    className: 'foo-bar'
+                })
             })
     }
 

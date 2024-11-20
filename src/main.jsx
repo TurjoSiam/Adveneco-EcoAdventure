@@ -16,6 +16,7 @@ import PrivateRoute from './Routes/PrivateRoute';
 import ErrorPage from './LayoutComponents/ErrorPage';
 import AdventureDetails from './Routes/AdventureDetails';
 import { ToastContainer } from 'react-toastify';
+import ForgetPassword from './Routes/ForgetPassword';
 
 
 
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path: "/forgetpassword",
+        element: <ForgetPassword></ForgetPassword>
       }
     ]
   },
