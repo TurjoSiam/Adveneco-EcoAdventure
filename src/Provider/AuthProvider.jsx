@@ -16,26 +16,30 @@ const AuthProvider = ({ children }) => {
     const createNewUser = (email, password) => {
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
-    }
+    };
 
     const signInUser = (email, password) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
-    }
+    };
 
     const signInWithGoogle = () => {
         return signInWithPopup(auth, googleProvider)
-    }
+    };
 
     const profileUpdateWhenLogin = (updatedData) => {
         return updateProfile(auth.currentUser, updatedData)
+    };
+
+    const profileUpdate = (newData) => {
+        return updateProfile(auth.currentUser, newData)
     };
 
 
     const signOutUser = () => {
         setLoading(true);
         return signOut(auth);
-    }
+    };
 
 
     useEffect(() => {
@@ -48,7 +52,7 @@ const AuthProvider = ({ children }) => {
         return () => {
             unSubscribe();
         }
-    })
+    });
 
 
 
@@ -62,6 +66,7 @@ const AuthProvider = ({ children }) => {
         signInUser,
         signInWithGoogle,
         profileUpdateWhenLogin,
+        profileUpdate,
         signOutUser
     }
 
