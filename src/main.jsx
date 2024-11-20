@@ -17,6 +17,7 @@ import ErrorPage from './LayoutComponents/ErrorPage';
 import AdventureDetails from './Routes/AdventureDetails';
 import { ToastContainer } from 'react-toastify';
 import ForgetPassword from './Routes/ForgetPassword';
+import DynamicTitle from './DynamicTitle/DynamicTitle';
 
 
 
@@ -28,33 +29,54 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>,
+        element: <>
+          <DynamicTitle title="Adveneco | Home"></DynamicTitle>
+          <Home></Home>
+        </>,
         loader: () => fetch('/data.json')
       },
       {
         path: "/profile",
-        element: <PrivateRoute><Profile></Profile></PrivateRoute>
+        element: <>
+          <DynamicTitle title="Adveneco | Profile"></DynamicTitle>
+          <PrivateRoute><Profile></Profile></PrivateRoute>
+        </>
       },
       {
         path: "/updateprofile",
-        element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
+        element: <>
+          <DynamicTitle title="Adveneco | Update Profile"></DynamicTitle>
+          <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
+        </>
       },
       {
         path: "/adventuredetails/:adventureId",
-        element: <PrivateRoute><AdventureDetails></AdventureDetails></PrivateRoute>,
+        element: <>
+          <DynamicTitle title="Adveneco | Adventure Details"></DynamicTitle>
+          <PrivateRoute><AdventureDetails></AdventureDetails></PrivateRoute>
+        </>,
         loader: () => fetch('/data.json')
       },
       {
         path: "/login",
-        element: <Login></Login>
+        element: <>
+          <DynamicTitle title="Adveneco | Login"></DynamicTitle>
+          <Login></Login>
+        </>
       },
       {
         path: "/register",
-        element: <Register></Register>
+        element: <>
+          <DynamicTitle title="Adveneco | Register"></DynamicTitle>
+          <Register></Register>
+        </>
       },
       {
         path: "/forgetpassword",
-        element: <ForgetPassword></ForgetPassword>
+        element: <>
+          <DynamicTitle title="Adveneco | Reset Password"></DynamicTitle>
+          <ForgetPassword></ForgetPassword>
+        </>
       }
     ]
   },
