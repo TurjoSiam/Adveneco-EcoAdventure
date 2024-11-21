@@ -18,6 +18,8 @@ import AdventureDetails from './Routes/AdventureDetails';
 import { ToastContainer } from 'react-toastify';
 import ForgetPassword from './Routes/ForgetPassword';
 import DynamicTitle from './DynamicTitle/DynamicTitle';
+import AboutUs from './Routes/AboutUs';
+import ContactUs from './Routes/ContactUs';
 
 
 
@@ -34,6 +36,20 @@ const router = createBrowserRouter([
           <Home></Home>
         </>,
         loader: () => fetch('/data.json')
+      },
+      {
+        path: "/aboutus",
+        element: <>
+          <DynamicTitle title="Adveneco | About us"></DynamicTitle>
+          <AboutUs></AboutUs>
+        </>
+      },
+      {
+        path: "/contactus",
+        element: <>
+          <DynamicTitle title="Adveneco | Contact us"></DynamicTitle>
+          <ContactUs></ContactUs>
+        </>
       },
       {
         path: "/profile",
