@@ -22,9 +22,9 @@ const Banner = () => {
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper">
-                <SwiperSlide><img src={banner1} alt="banner" /></SwiperSlide>
                 <SwiperSlide><img src={banner2} alt="banner" /></SwiperSlide>
                 <SwiperSlide><img src={banner3} alt="banner" /></SwiperSlide>
+                <SwiperSlide><img src={banner1} alt="banner" /></SwiperSlide>
             </Swiper>
         </div>
     );
