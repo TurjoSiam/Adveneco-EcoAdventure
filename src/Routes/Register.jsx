@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import { toast } from "react-toastify";
 
 
 const Register = () => {
@@ -19,6 +20,16 @@ const Register = () => {
         const photo = form.get('photo');
         const password = form.get('password');
 
+        const regexPassword = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+
+        if(!regexPassword.test(password)){
+            toast.error('Password must have an uppercase a lowercase and at least 6 characters', {
+                position: "bottom-right",
+                className: 'foo-bar'
+            })
+            return;
+        }
+
         createNewUser(email, password)
         .then(result => {
             console.log(result);
@@ -28,6 +39,10 @@ const Register = () => {
             })
             .then(() => {
                 navigate("/");
+                toast.success('Welcome to Adveneco', {
+                    position: "bottom-right",
+                    className: 'foo-bar'
+                })
             })
             .catch((error) => {
                 console.log('ERROR', error.message);
@@ -42,7 +57,7 @@ const Register = () => {
 
 
     return (
-        <form className="card-body w-11/12 md:w-8/12 lg:w-4/12 mx-auto my-10" onSubmit={handleSubmit}>
+        <form className="card-body w-11/12 md:w-8/12 lg:w-4/12 mx-auto my-10 bg-gradient-to-tr from-orange-200 to-red-200 rounded-2xl" onSubmit={handleSubmit}>
             <h1 className="text-3xl font-bold mb-5">Registration Form</h1>
             <div className="form-control">
                 <label className="label">
@@ -69,7 +84,7 @@ const Register = () => {
                 <input type="password" placeholder="password" name="password" className="input input-bordered" required />
             </div>
             <div className="form-control mt-6">
-                <button className="btn btn-primary">Register</button>
+                <button className="btn btn-primary bg-gradient-to-tr from-purple-600 to-blue-600 border-none">Register</button>
             </div>
             <h3>Already have an account? <Link className="underline" to="/login">Login</Link></h3>
         </form>

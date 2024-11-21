@@ -33,11 +33,8 @@ const ForgetPassword = () => {
     }
 
 
-
-
-
     return (
-        <form className="card-body w-4/12 mx-auto my-10" onSubmit={handleSubmit}>
+        <form className="card-body w-11/12 md:w-8/12 lg:w-4/12 mx-auto my-10 bg-gradient-to-tr from-orange-200 to-red-200 rounded-2xl" onSubmit={handleSubmit}>
             <h1 className="text-3xl font-bold mb-5">Reset Password</h1>
             <div className="form-control">
                 <label className="label">
@@ -46,7 +43,7 @@ const ForgetPassword = () => {
                 <input type="email" placeholder="email" defaultValue={emailValue} name="email" className="input input-bordered" required />
             </div>
             <div className="form-control mt-6">
-                <button className="btn btn-primary">Reset</button>
+                <button className="btn btn-primary bg-gradient-to-tr from-purple-600 to-blue-600 border-none">Reset</button>
             </div>
         </form>
     );

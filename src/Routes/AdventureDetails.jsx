@@ -26,15 +26,9 @@ const AdventureDetails = () => {
             window.open("https://meet.google.com/", "_blank");
         }
         else {
-            showModal()
+            document.getElementById('my_modal').showModal();
         }
     }
-
-
-
-
-
-
 
 
     return (
@@ -76,10 +70,10 @@ const AdventureDetails = () => {
                     <h2>Adventure Cost: $ <span className="font-normal">{adventureCost}</span></h2>
                     <button onClick={handleTalkWithExpert} className="btn transition-all ease-in duration-300 bg-gradient-to-tr from-orange-500 to-orange-300 hover:bg-gradient-to-tr hover:from-orange-300 hover:to-orange-500">Talk With Expert</button>
                     {/* Open the modal using document.getElementById('ID').showModal() method */}
-                    <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+                    <dialog id="my_modal" className="modal modal-bottom sm:modal-middle">
                         <div className="modal-box">
-                            <h3 className="font-bold text-lg">Thanks for your interest!</h3>
-                            <p className="py-4">Consulting session available from 10:00 am to 08:00 pm.</p>
+                            <h3 className="font-bold text-2xl">Thanks for your interest !</h3>
+                            <p className="py-4 text-lg">Consulting session only available from <span className="text-orange-600">10:00 am</span> to <span className="text-orange-600">08:00 pm</span>.</p>
                             <div className="modal-action">
                                 <form method="dialog">
                                     {/* if there is a button in form, it will close the modal */}
