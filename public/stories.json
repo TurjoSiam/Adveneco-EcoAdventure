@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Into the Heart of the Rainforest",
+        "photo": "https://i.ibb.co.com/sQj83wn/rainforest.jpg",
+        "details": "An unforgettable trek through lush rainforests where adventurers discovered exotic flora, fauna, and cascading waterfalls. The journey included guided tours to explore hidden trails, encounters with rare wildlife, and breathtaking views from natural viewpoints."
+    },
+    {
+        "id": 2,
+        "title": "Kayaking Through Serene Waters",
+        "photo": "https://i.ibb.co.com/Pghydbz/kayaking.jpg",
+        "details": "A peaceful kayaking journey along crystal-clear rivers, offering breathtaking views of surrounding cliffs and mangroves. The adventure also included stops at hidden lagoons, opportunities to spot diverse bird species, and a tranquil lunch break on a secluded riverbank."
+    },
+    {
+        "id": 3,
+        "title": "Camping Under the Stars",
+        "photo": "https://i.ibb.co.com/Y73kK84/star.jpg",
+        "details": "A magical night of camping in a remote location, complete with storytelling, a bonfire, and a sky full of stars. Participants enjoyed guided stargazing sessions, warm drinks by the fire, and a serene morning surrounded by the sounds of nature."
+    }
+]

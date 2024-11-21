@@ -2,6 +2,7 @@ import DynamicTitle from "../DynamicTitle/DynamicTitle";
 import Adventures from "../HomeComponents/Adventures";
 import Banner from "../HomeComponents/Banner";
 import HappyMembers from "../HomeComponents/HappyMembers";
+import Stories from "../HomeComponents/Stories";
 
 const Home = () => {
 
@@ -11,6 +12,7 @@ const Home = () => {
         <div className="mx-auto font-spinnaker">
             <Banner></Banner>
            <Adventures></Adventures>
+           <Stories></Stories>
            <HappyMembers></HappyMembers>
         </div>
     );
