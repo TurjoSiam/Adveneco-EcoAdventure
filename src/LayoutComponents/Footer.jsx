@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../../src/assets/logo.png"
+import { FaDiscord, FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 
 
 const Footer = () => {
@@ -19,16 +20,16 @@ const Footer = () => {
                     <nav>
                         <div className="grid grid-flow-col gap-4">
                             <a href="https://www.facebook.com/tur.jo.9275">
-                                <i className="fa-brands fa-facebook text-3xl"></i>
+                            <FaFacebook className="text-3xl"></FaFacebook>
                             </a>
                             <a href="https://x.com/SiamTurjo">
-                                <i className="fa-brands fa-twitter text-3xl"></i>
+                                <FaTwitter className="text-3xl"></FaTwitter>
                             </a>
                             <a href="https://www.youtube.com/@turjosiam">
-                                <i className="fa-brands fa-youtube text-3xl"></i>
+                                <FaYoutube className="text-3xl"></FaYoutube>
                             </a>
                             <a href="https://discord.com/channels/1254673307735691376/1254683037342498847">
-                                <i className="fa-brands fa-discord text-3xl"></i>
+                                <FaDiscord className="text-3xl"></FaDiscord>
                             </a>
 
                         </div>

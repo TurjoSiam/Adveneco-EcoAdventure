@@ -9,7 +9,7 @@ import banner3 from '../../src/assets/banner3.jpg';
 
 const Banner = () => {
     return (
-        <div className='md:mb-16'>
+        <div className='mb-16'>
             <Swiper spaceBetween={30}
                 centeredSlides={true}
                 autoplay={{
@@ -22,9 +22,9 @@ const Banner = () => {
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper">
-                <SwiperSlide><img src={banner2} alt="banner" /></SwiperSlide>
-                <SwiperSlide><img src={banner3} alt="banner" /></SwiperSlide>
-                <SwiperSlide><img src={banner1} alt="banner" /></SwiperSlide>
+                <SwiperSlide><img className='min-h-72 object-cover' src={banner2} alt="banner" /></SwiperSlide>
+                <SwiperSlide><img className='min-h-72 object-cover' src={banner3} alt="banner" /></SwiperSlide>
+                <SwiperSlide><img className='min-h-72 object-cover' src={banner1} alt="banner" /></SwiperSlide>
             </Swiper>
         </div>
     );

@@ -8,7 +8,7 @@ import client5 from "../../src/assets/client5.jpg"
 const HappyMembers = () => {
     return (
         <div className="mx-auto space-y-7 my-20 py-10 font-spinnaker bg-[url('/client-bg.jpg')] text-center">
-            <h2 className="text-3xl text-white font-extrabold">"Hear from Our Happy Explorers"</h2>
+            <h2 className="text-2xl md:text-3xl text-white font-extrabold">"Hear from Our Happy Explorers"</h2>
             <Marquee direction="left">
                 <div className="flex justify-center items-center bg-gray-100 mr-10 rounded-2xl">
                     <div className="bg-white p-6 rounded-lg shadow-lg max-w-md text-center">
