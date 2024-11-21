@@ -4,14 +4,14 @@ import logo from "../../src/assets/logo.png"
 
 const Footer = () => {
     return (
-        <footer className="footer flex flex-col items-center bg-slate-200 text-base-content rounded p-10 font-spinnaker">
-            <div className="w-full px-40 flex items-center justify-between">
+        <footer className="footer flex flex-col items-center bg-slate-200 text-base-content rounded md:p-10 p-5 font-spinnaker">
+            <div className="w-full md:px-5 lg:px-40 flex flex-col md:flex-row items-center justify-between">
                 <Link to="/"><div className="flex items-center">
-                    <img className="w-24" src={logo} alt="" />
-                    <span className="text-3xl font-carter">Adveneco</span>
+                    <img className="w-24" src={logo} alt="photo" />
+                    <span className="hidden md:block text-3xl font-carter">Adveneco</span>
                 </div></Link>
-                <div className="space-y-5">
-                    <nav className="grid grid-flow-col gap-4">
+                <div className="md:space-y-5">
+                    <nav className="flex items-center gap-5">
                         <Link to="/">Home</Link>
                         <Link to="/aboutus">About us</Link>
                         <Link to="/contactus">Contact us</Link>

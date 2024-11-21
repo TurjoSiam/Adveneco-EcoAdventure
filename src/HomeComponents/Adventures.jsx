@@ -7,9 +7,9 @@ const Adventures = () => {
     const allData = useLoaderData();
 
     return (
-        <div className="w-10/12 mx-auto space-y-7 my-10 text-center">
+        <div className="w-10/12 mx-auto space-y-7 my-5 md:my-10 text-center">
             <h2 className="text-3xl font-extrabold">"Your Next Wild Journey Awaits"</h2>
-            <div className="grid grid-cols-3 gap-7 animate__animated animate__fadeIn animate__slow">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 animate__animated animate__fadeIn animate__slow">
                 {
                     allData.map(data => <Adventure key={data.id} data={data}></Adventure>)
                 }

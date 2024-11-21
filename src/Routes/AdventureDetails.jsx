@@ -38,17 +38,17 @@ const AdventureDetails = () => {
 
 
     return (
-        <div className="relative w-8/12 mx-auto font-spinnaker my-10 animate__animated animate__zoomIn">
+        <div className="md:relative w-11/12 w-10/12 lg:w-8/12 mx-auto font-spinnaker my-10 animate__animated animate__zoomIn">
 
-            <div className="bg-gradient-to-tr from-sky-100 to-orange-100 grid grid-cols-2 w-8/12 mx-auto py-10 rounded-2xl">
+            <div className="bg-gradient-to-tr from-sky-100 to-orange-100 grid grid-cols-1 gap-7 md: md:gap-0 md:grid-cols-2 w-full lg:w-8/12 mx-auto py-3 md:py-10 rounded-2xl">
                 <div></div>
-                <div className="col-span-1 absolute -left-2 top-32">
-                    <img className="w-[500px] rounded-xl hover:scale-105 transition-all duration-300 ease-in mb-3" src={image} alt="image" />
-                    <h2 className="text-3xl font-bold">{adventureTitle}</h2>
+                <div className="ml-7 md:ml-0 col-span-1 md:absolute md:left-5 lg:-left-2 top-32">
+                    <img className="w-[300px] lg:w-[500px] rounded-xl hover:scale-105 transition-all duration-300 ease-in mb-3" src={image} alt="image" />
+                    <h2 className="text-2xl lg:text-3xl font-bold">{adventureTitle}</h2>
                     <h2 className="text-xl">{categoryName}</h2>
                 </div>
                 <div className="col-span-1 px-7 font-bold space-y-2">
-                    <h1 className="text-3xl font-bold mb-5">Adventure Details</h1>
+                    <h1 className="text-3xl font-bold md:mb-5">Adventure Details</h1>
                     <h2>Location: <span className="font-normal">{location}</span></h2>
                     <h2>Adventure Level: <span className="font-normal">{adventureLevel}</span></h2>
                     <h2>Duration: <span className="font-normal">{duration}</span></h2>

@@ -38,7 +38,7 @@ const Header = () => {
 
 
     return (
-        <div className="navbar bg-base-100 px-20 mx-auto font-spinnaker sticky top-0 z-50 bg-[#ffffffaa] backdrop-blur-2xl">
+        <div className="navbar bg-base-100 md:5 lg:px-20 mx-auto font-spinnaker sticky top-0 z-50 bg-[#ffffffaa] backdrop-blur-2xl">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -63,7 +63,7 @@ const Header = () => {
                 </div>
                 <div className="flex items-center cursor-pointer" onClick={handleLogo}>
                     <img className="w-14" src={logo} alt="logo" />
-                    <span className="text-3xl font-carter">Adveneco</span>
+                    <span className="hidden md:block text-3xl font-carter">Adveneco</span>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">

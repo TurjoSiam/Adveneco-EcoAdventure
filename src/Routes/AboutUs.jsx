@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const AboutUs = () => {
     return (
-        <div className="font-spinnaker w-8/12 mx-auto my-10 space-y-3 p-10 bg-gradient-to-br from-orange-100 to-red-100 rounded-3xl">
+        <div className="font-spinnaker w-11/12 md:w-10/12 lg:w-8/12 mx-auto my-10 space-y-3 p-10 bg-gradient-to-br from-orange-100 to-red-100 rounded-3xl">
             <h2 className="text-3xl font-bold">About <span className="font-carter font-normal">Adveneco</span></h2>
             <p>Welcome to <span className="font-carter">Adveneco</span>, your gateway to unforgettable eco-adventures! We are dedicated to creating immersive experiences that connect you with the beauty of nature while promoting sustainable tourism practices. <br />Our mission is simple: to inspire a deeper appreciation for the natural world while leaving no trace behind. Whether you're trekking through lush rainforests, kayaking along serene rivers, or camping under star-filled skies, every adventure is designed with care for the environment and respect for local communities.</p>
             <h2 className="text-2xl font-bold">Why Choose Us?</h2>

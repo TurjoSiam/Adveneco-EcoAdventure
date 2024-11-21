@@ -9,7 +9,7 @@ import banner3 from '../../src/assets/banner3.jpg';
 
 const Banner = () => {
     return (
-        <div className='mb-16'>
+        <div className='md:mb-16'>
             <Swiper spaceBetween={30}
                 centeredSlides={true}
                 autoplay={{
