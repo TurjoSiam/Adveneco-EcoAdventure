@@ -34,7 +34,7 @@ const AdventureDetails = () => {
     return (
         <div className="md:relative w-11/12 w-10/12 lg:w-8/12 mx-auto font-spinnaker my-10 animate__animated animate__zoomIn">
 
-            <div className="bg-gradient-to-tr from-sky-100 to-orange-100 grid grid-cols-1 gap-7 md: md:gap-0 md:grid-cols-2 w-full lg:w-8/12 mx-auto py-3 md:py-10 rounded-2xl">
+            <div className="bg-gradient-to-tr from-sky-100 to-orange-100 grid grid-cols-1 gap-7 md: md:gap-0 md:grid-cols-2 w-full lg:w-8/12 mx-auto py-4 md:py-10 rounded-2xl">
                 <div></div>
                 <div className="ml-7 md:ml-0 col-span-1 md:absolute md:left-5 lg:-left-2 top-32">
                     <img className="w-[300px] lg:w-[500px] rounded-xl hover:scale-105 transition-all duration-300 ease-in mb-3" src={image} alt="image" />
