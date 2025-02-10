@@ -12,6 +12,11 @@ export default {
       }
     },
   },
+  darkMode: false,
   plugins: [require('daisyui'),],
+  daisyui: {
+    themes: ["light"]
+  }
 }
+
 
